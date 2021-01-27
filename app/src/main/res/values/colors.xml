@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--    Palette colors-->
+    <color name="pat_black">#3a353f</color>
+    <color name="pat_grey">#505668</color>
+    <color name="pat_white">#f1ece1</color>
+    <color name="pat_orange">#c05850</color>
+
 </resources>
