@@ -35,23 +35,27 @@
             android:layout_marginBottom="15dp"
             android:gravity="bottom">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnConductor"
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:text="Soy conductor"
                 android:backgroundTint="@color/pat_black"
-                android:layout_marginRight="10dp"/>
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/pat_white"
+                android:layout_marginRight="10dp"
+                />
 
-            <Button
-                android:id="@+id/btnCliente"
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginLeft="10dp"
+                android:background="@drawable/rounded_button"
                 android:backgroundTint="@color/pat_grey"
-                android:text="Soy cliente"/>
+                android:text="Soy cliente"
+                android:textColor="@color/pat_white"
+                />
 
         </LinearLayout>
 
