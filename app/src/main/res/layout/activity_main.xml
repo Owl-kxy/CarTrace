@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/rounded_button"
-                android:backgroundTint="@color/pat_white"
+                android:backgroundTint="@color/pat_ligthgrey"
                 android:text="Soy cliente"
                 android:layout_marginLeft="10dp"
                 />
