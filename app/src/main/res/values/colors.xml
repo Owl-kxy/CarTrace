@@ -9,9 +9,12 @@
     <color name="white">#FFFFFFFF</color>
 
     <!--    Palette colors-->
-    <color name="pat_black">#3a353f</color>
-    <color name="pat_grey">#505668</color>
+    <color name="pat_black">#2D2D30</color>
+    <color name="pat_grey">#787680</color>
+    <color name="pat_ligthgrey">#ACABB1</color>
     <color name="pat_white">#f1ece1</color>
     <color name="pat_orange">#c05850</color>
+    <color name="pat_green">#5ae3b1</color>
+    <color name="pat_skyblue">#63bff3</color>
 
 </resources>
