@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!--    Palette colors-->
+    <!--Palette colors-->
     <color name="pat_black">#2D2D30</color>
     <color name="pat_grey">#787680</color>
     <color name="pat_ligthgrey">#ACABB1</color>
