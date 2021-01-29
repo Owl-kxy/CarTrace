@@ -3,63 +3,58 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
-
-    android:background="@color/pat_grey"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".SelectOptionAuthActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/pat_grey"
+        android:orientation="vertical"
+        android:gravity="center">
 
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/icon_car"
-            android:layout_marginTop="50dp"
+            android:src="@drawable/icon_auth"
             android:layout_gravity="center"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Car Trace"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:textColor="@color/pat_white" />
+            android:text="Seleccione una opción"
+            android:textColor="@color/pat_white"
+            android:textAlignment="center"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="15dp"
-            android:gravity="bottom">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:layout_marginRight="35dp"
+            android:layout_marginLeft="35dp">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnConductor"
+                android:id="@+id/btnRegistro"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="Soy conductor"
-                android:backgroundTint="@color/pat_black"
                 android:background="@drawable/rounded_button"
                 android:textColor="@color/pat_white"
-                android:layout_marginRight="10dp"
-                />
+                android:backgroundTint="@color/pat_black"
+                android:text="Registrarme"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnCliente"
-                android:layout_width="0dp"
+                android:id="@+id/btnLoginIn"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/rounded_button"
+                android:text="Ya tengo una cuenta"
                 android:backgroundTint="@color/pat_ligthgrey"
-                android:text="Soy cliente"
-                android:layout_marginLeft="10dp"
-                />
+                android:layout_weight="1"/>
 
         </LinearLayout>
 
