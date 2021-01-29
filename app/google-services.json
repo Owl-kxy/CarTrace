@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "802918300415",
+    "project_id": "cartracedb",
+    "storage_bucket": "cartracedb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802918300415:android:f9f6c03d9f5c762e562aca",
+        "android_client_info": {
+          "package_name": "com.ronald.cartrace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "802918300415-991tl64s9hfvrm0fusv1b296i3ghjole.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLpqT43BvitmmYCD3DG952mN56_62qTnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "802918300415-991tl64s9hfvrm0fusv1b296i3ghjole.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

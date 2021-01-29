@@ -24,6 +24,7 @@
             android:layout_marginBottom="15dp"/>
 
         <EditText
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16dp"
@@ -37,6 +38,7 @@
             android:layout_marginBottom="15dp"/>
 
         <EditText
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16dp"
@@ -52,7 +54,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnIniciarSesion"
+            android:id="@+id/btnLogInUser"
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/pat_black"
             android:textColor="@color/white"
