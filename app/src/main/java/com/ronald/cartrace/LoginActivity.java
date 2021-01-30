@@ -2,9 +2,11 @@ package com.ronald.cartrace;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,10 +19,17 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import dmax.dialog.SpotsDialog;
+
 public class LoginActivity extends AppCompatActivity {
 
     Button vbtnLogInUser;
     EditText vedtpassword, vedtemail;
+
+    Toolbar vToolbarLogIn;
+
+    // Alert dialog (...) variable
+    AlertDialog vDialog;
 
     // FireBase variable
     FirebaseAuth vFirebaseAuth;
@@ -37,8 +46,20 @@ public class LoginActivity extends AppCompatActivity {
         vedtpassword = findViewById(R.id.edtPassword);
         vedtemail = findViewById(R.id.edtEmail);
 
+        vToolbarLogIn = findViewById(R.id.toolbar);
+
+        //Intanced firedbase
         vFirebaseAuth = FirebaseAuth.getInstance();
+        //Get data on database
         vDatabaseRef = FirebaseDatabase.getInstance().getReference();
+
+        setSupportActionBar(vToolbarLogIn);
+        getSupportActionBar().setTitle("LogIn");
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // Construct method -> Activity on develop -> Msg user view
+        vDialog = new SpotsDialog.Builder().setContext(LoginActivity.this).setMessage("Comprobando credenciales").build();
 
         vbtnLogInUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +78,9 @@ public class LoginActivity extends AppCompatActivity {
         {
             if(password.length()>=6)
             {
+                vDialog.show();
+
+                //Auth data email- pass saved on database with data put for user
                 vFirebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -69,6 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                         {
                             Toast.makeText(LoginActivity.this,"Fail", Toast.LENGTH_SHORT).show();
                         }
+                        vDialog.dismiss();
                     }
                 });
             }

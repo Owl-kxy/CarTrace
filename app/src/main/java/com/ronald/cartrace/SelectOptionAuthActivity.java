@@ -13,6 +13,7 @@ public class SelectOptionAuthActivity extends AppCompatActivity {
     Toolbar vToolbar;
     Button vbtnRegistrarme, vbtnLogIn;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +32,27 @@ public class SelectOptionAuthActivity extends AppCompatActivity {
         vbtnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intLogIn = new Intent(SelectOptionAuthActivity.this, LoginActivity.class);
-                startActivity(intLogIn);
+                goLoginActivity();
             }
         });
 
+        vbtnRegistrarme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goRegisterActivity();
+            }
+        });
+    }
+
+    private void goLoginActivity ()
+    {
+        Intent intLogIn = new Intent(SelectOptionAuthActivity.this, LoginActivity.class);
+        startActivity(intLogIn);
+    }
+
+    private void goRegisterActivity()
+    {
+        Intent intRegistrarme = new Intent(SelectOptionAuthActivity.this, RegisterActivity.class);
+        startActivity(intRegistrarme);
     }
 }
